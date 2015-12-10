@@ -21,6 +21,7 @@ func main() {
 	defer s.Done()
 
 	s.LogInfo("hello, story!").AddData("count", 123)
-}```
+}
+```
 
 ..This is a work in progress..
