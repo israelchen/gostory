@@ -13,8 +13,8 @@ type Handler interface {
 type Rule func(*Story) bool
 
 type PredicatedHandler struct {
-	rule    Rule
-	handler Handler
+	Rule    Rule
+	Handler Handler
 }
 
 var (

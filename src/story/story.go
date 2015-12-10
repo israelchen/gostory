@@ -64,8 +64,8 @@ func New(name string) *Story {
 	}
 
 	for _, ph := range rules {
-		if ph.rule(result) {
-			ph.handler.Stopped(result)
+		if ph.Rule(result) {
+			ph.Handler.Stopped(result)
 		}
 	}
 
@@ -79,8 +79,8 @@ func (s *Story) Done() *Story {
 	s.EndTime = time.Now()
 
 	for _, ph := range rules {
-		if ph.rule(s) {
-			ph.handler.Stopped(s)
+		if ph.Rule(s) {
+			ph.Handler.Stopped(s)
 		}
 	}
 
