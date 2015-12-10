@@ -30,10 +30,10 @@ func (s *Story) Log(severity LogSeverity, message string, args ...interface{}) *
 
 	util.Require(len(message) > 0, "'message' cannot be empty.")
 
+	formatted := fmt.Sprintf(message, args...)
+
 	s.lock.Lock()
 	defer s.lock.Unlock()
-
-	formatted := fmt.Sprintf(message, args...)
 
 	s.LogEntries = append(s.LogEntries, LogEntry{
 		Severity:   severity,
