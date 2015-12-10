@@ -1,0 +1,2 @@
+# gostory
+story
