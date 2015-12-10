@@ -14,7 +14,7 @@ import (
 
 func main() {
 
-	fmtHandler := &handlers.FmtHandler{story.DEBUG}
+    fmtHandler := handlers.NewFmtHandler(story.DEBUG)
 	story.AddHandler(rules.AlwaysOn, fmtHandler)
 
 	s := story.New("blah")

@@ -6,23 +6,29 @@ import (
 	"time"
 )
 
-type FmtHandler struct {
-	Severity story.LogSeverity
+func NewFmtHandler(severity story.LogSeverity) *fmtHandler {
+	return &fmtHandler{
+		severity: story.DEBUG,
+	}
+}
+
+type fmtHandler struct {
+	severity story.LogSeverity
 }
 
 func formatTime(t time.Time) string {
 	return t.UTC().Format(time.RFC3339)
 }
 
-func (h *FmtHandler) Started(s *story.Story) {
+func (h *fmtHandler) Started(s *story.Story) {
 }
 
-func (h *FmtHandler) Stopped(s *story.Story) {
+func (h *fmtHandler) Stopped(s *story.Story) {
 
 	shouldPrint := false
 
 	for _, entry := range s.LogEntries {
-		if entry.Severity >= h.Severity {
+		if entry.Severity >= h.severity {
 			shouldPrint = true
 			break
 		}
