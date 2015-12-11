@@ -9,9 +9,9 @@ import (
 func main() {
 
 	fmtHandler := handlers.NewFmtHandler(gostory.DEBUG)
-	story.AddHandler(rules.AlwaysOn, fmtHandler)
+	gostory.AddHandler(rules.AlwaysOn, fmtHandler)
 
-	s := story.New("blah")
+	s := gostory.New("blah")
 	defer s.Done()
 
 	s.Info("hello, story!").AddData("count", 123)
