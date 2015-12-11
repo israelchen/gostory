@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	fmtHandler := handlers.NewFmtHandler(story.DEBUG)
+	fmtHandler := handlers.NewFmtHandler(gostory.DEBUG)
 	story.AddHandler(rules.AlwaysOn, fmtHandler)
 
 	s := story.New("blah")
