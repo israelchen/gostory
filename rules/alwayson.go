@@ -1,7 +1,7 @@
 package rules
 
 import (
-	"story"
+	"github.com/israelchen/gostory"
 )
 
 func AlwaysOn(s *story.Story) bool {

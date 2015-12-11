@@ -1,9 +1,10 @@
-package story
+package gostory
 
 import (
 	"fmt"
 	"time"
-	"util"
+
+	"github.com/israelchen/gostory/util"
 )
 
 func (s *Story) Error(message string, args ...interface{}) *Story {

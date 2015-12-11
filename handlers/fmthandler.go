@@ -2,8 +2,9 @@ package handlers
 
 import (
 	"fmt"
-	"story"
 	"time"
+
+	"github.com/israelchen/gostory"
 )
 
 func NewFmtHandler(severity story.LogSeverity) *fmtHandler {

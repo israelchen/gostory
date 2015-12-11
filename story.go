@@ -1,10 +1,11 @@
-// Package story encapsulates the creation and interaction with stories.
-package story
+// Package gostory encapsulates the creation and interaction with stories.
+package gostory
 
 import (
 	"sync"
 	"time"
-	"util"
+
+	"github.com/israelchen/gostory/util"
 )
 
 type LogSeverity int

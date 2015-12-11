@@ -1,8 +1,9 @@
-package story
+package gostory
 
 import (
 	"sync"
-	"util"
+
+	"github.com/israelchen/gostory/util"
 )
 
 // It is strongly recommended to perform only quick

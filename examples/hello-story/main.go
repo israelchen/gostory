@@ -1,9 +1,9 @@
 package main
 
 import (
-	"story"
-	"story/handlers"
-	"story/rules"
+	"github.com/israelchen/gostory"
+	"github.com/israelchen/gostory/handlers"
+	"github.com/israelchen/gostory/rules"
 )
 
 func main() {

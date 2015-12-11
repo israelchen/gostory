@@ -1,8 +1,9 @@
-package story
+package gostory
 
 import (
 	"time"
-	"util"
+
+	"github.com/israelchen/gostory/util"
 )
 
 func (s *Story) AddData(key string, value interface{}) *Story {
