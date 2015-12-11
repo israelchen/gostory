@@ -6,23 +6,23 @@ import (
 	"util"
 )
 
-func (s *Story) LogError(message string, args ...interface{}) *Story {
+func (s *Story) Error(message string, args ...interface{}) *Story {
 	return s.Log(ERROR, message, args...)
 }
 
-func (s *Story) LogInfo(message string, args ...interface{}) *Story {
+func (s *Story) Info(message string, args ...interface{}) *Story {
 	return s.Log(INFO, message, args...)
 }
 
-func (s *Story) LogWarning(message string, args ...interface{}) *Story {
+func (s *Story) Warning(message string, args ...interface{}) *Story {
 	return s.Log(WARNING, message, args...)
 }
 
-func (s *Story) LogDebug(message string, args ...interface{}) *Story {
+func (s *Story) Debug(message string, args ...interface{}) *Story {
 	return s.Log(DEBUG, message, args...)
 }
 
-func (s *Story) LogFatal(message string, args ...interface{}) *Story {
+func (s *Story) Fatal(message string, args ...interface{}) *Story {
 	return s.Log(FATAL, message, args...)
 }
 

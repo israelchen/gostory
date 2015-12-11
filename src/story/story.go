@@ -1,3 +1,4 @@
+// Package story encapsulates the creation and interaction with stories.
 package story
 
 import (

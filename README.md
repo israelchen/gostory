@@ -20,7 +20,7 @@ func main() {
 	s := story.New("blah")
 	defer s.Done()
 
-	s.LogInfo("hello, story!").AddData("count", 123)
+	s.Info("hello, story!").AddData("count", 123)
 }
 ```
 

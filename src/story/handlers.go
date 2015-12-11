@@ -5,15 +5,31 @@ import (
 	"util"
 )
 
+// It is strongly recommended to perform only quick
+// and simple operations here and offload any long-running operation to
+// a goroutine.
 type Handler interface {
+	// Started will be called as the story starts, in order to allow the handler
+	// to perform some work.
 	Started(s *Story)
+
+	// Stopped will be called when a story ends, in order to allow the handler
+	// to examine the different properties such as data, log, return error code.
 	Stopped(s *Story)
 }
 
+// Rule provides a simple way to determine whether a handler applies
+// to a given story.
 type Rule func(*Story) bool
 
+// PredicatedHandler couples a Handler with a Rule that determines whether
+// it applies to a given story.
 type PredicatedHandler struct {
-	Rule    Rule
+	// Rule will determine whether the handler applies to
+	// a given story.
+	Rule Rule
+
+	// A handler to invoke upon story start/stop.
 	Handler Handler
 }
 
